@@ -50,7 +50,7 @@ def generate_app_loader(image, env, binary):
         apploader.write(env.get_template('apploader.template').render(binary=binary))
 
 # Generate a dockerfile that compiles Graphene and includes the application image. This dockerfile
-# is generated from a template (templates/Dockerfile.$distro.template. It follows a docker
+# is generated from a template (templates/Dockerfile.$distro.template). It follows a docker
 # multistage build with two stages. The first stage compiles Graphene for the specified
 # distribution. The second stage builds the final image based on the previously built Graphene and
 # the base image. In addition, it completes the manifest generation and generates the signature.
